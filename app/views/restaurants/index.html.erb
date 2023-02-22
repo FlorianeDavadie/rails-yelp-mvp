@@ -1,0 +1,12 @@
+<h1 class="text-center">Restaurants</h1>
+
+<div class="container"><ul class="blockquote">
+    <% @restaurants.each do |restaurant| %>
+      <blockquote class="blockquote"><li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %>
+      </blockquote>
+        <figcaption class="blockquote-footer"> <%=  - restaurant.address %>
+        <%=  - restaurant.phone_number %>
+        <%=  - restaurant.category %>
+        </figcaption>
+    <% end %>
+  </ul></div>
